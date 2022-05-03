@@ -1,0 +1,16 @@
+<input type="text" id="todofield" #todoitem required />
+<button (click)="onAdd(todoitem.value); todoitem.value = ''">Add</button>
+<p>
+  <strong>{{ getOpen() }}</strong> remaining out of
+  <strong>{{ getTodo().length }}</strong> tasks
+</p>
+<hr />
+<ul>
+  <li
+    *ngFor="let todo of getTodo(); let i = index"
+    (click)="onToggle(i)"
+    [ngClass]="{ 'is-done': todo.status }"
+  >
+    {{ todo.name }}
+  </li>
+</ul>

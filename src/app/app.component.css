@@ -1,0 +1,15 @@
+p {
+  font-family: Lato;
+}
+
+#todofield {
+  margin-right: 10px;
+}
+
+li {
+  cursor: pointer;
+}
+
+.is-done {
+  text-decoration: line-through;
+}
